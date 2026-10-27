@@ -1,0 +1,16 @@
+# Dependencias
+node_modules/
+
+# Artefactos de Cypress (se generan solos)
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Credenciales (clave de Google, nunca subir)
+.env
+credentials.json
+*.key.json
+
+# Sistema
+.DS_Store
+Thumbs.db
