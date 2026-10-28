@@ -1,0 +1,68 @@
+[
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-28T02:50:24.764Z",
+    "firstContentfulPaint": 1102,
+    "largestContentfulPaint": 1659,
+    "speedIndex": 1440,
+    "performance": 83,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-28T02:50:42.729Z",
+    "firstContentfulPaint": 1097,
+    "largestContentfulPaint": 1139,
+    "speedIndex": 1278,
+    "performance": 77,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-28T02:50:54.193Z",
+    "firstContentfulPaint": 1157,
+    "largestContentfulPaint": 1249,
+    "speedIndex": 1356,
+    "performance": 91,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-28T02:51:06.209Z",
+    "firstContentfulPaint": 1084,
+    "largestContentfulPaint": 1175,
+    "speedIndex": 1187,
+    "performance": 81,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-28T02:51:23.178Z",
+    "firstContentfulPaint": 1139,
+    "largestContentfulPaint": 1220,
+    "speedIndex": 1216,
+    "performance": 66,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-28T02:51:34.905Z",
+    "firstContentfulPaint": 1151,
+    "largestContentfulPaint": 1194,
+    "speedIndex": 1227,
+    "performance": 77,
+    "status": "ok",
+    "error": null
+  }
+]
