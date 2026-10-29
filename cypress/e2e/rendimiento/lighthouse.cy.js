@@ -21,10 +21,12 @@ dispositivos.forEach((dispositivo) => {
     describe(`${pagina.nombre} - ${dispositivo.nombre}`, () => {
       it("mide el rendimiento con Lighthouse", function () {
         // Si se pasó --env dispositivo=movil, los demás dispositivos se saltan
-        cy.env(["dispositivo"]).then(({ dispositivo: filtro }) => {
-          if (filtro !== "todos" && filtro !== dispositivo.id) {
-            this.skip();
-          }
+      cy.env(["dispositivo", "paginas"]).then(({ dispositivo: filtro, paginas: filtroPaginas }) => {
+        const dispositivoOk = filtro === "todos" || filtro === dispositivo.id;
+        const paginaOk = filtroPaginas === "todas" || filtroPaginas.split("+").includes(pagina.id);
+        if (!dispositivoOk || !paginaOk) {
+          this.skip();
+        }
 
           cy.viewport(dispositivo.width, dispositivo.height);
           cy.visit(pagina.url);
@@ -37,7 +39,7 @@ dispositivos.forEach((dispositivo) => {
                 mobile: dispositivo.formFactor === "mobile",
                 width: dispositivo.width,
                 height: dispositivo.height,
-                deviceScaleFactor: 1,
+                deviceScaleFactor: dispositivo.deviceScaleFactor,
                 disabled: false,
               },
             },

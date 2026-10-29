@@ -66,7 +66,7 @@ function armarRegistro(resultado) {
 
 module.exports = defineConfig({
   taskTimeout: 180000, // Lighthouse tarda, así Cypress no corta la tarea
-  env: { dispositivo: "todos" }, // por defecto mide todos los dispositivos
+  env: { dispositivo: "todos", paginas: "todas" }, // por defecto mide todos los dispositivos
   e2e: {
     video: false, //no hace falta grabar video en cada medición
     screenshotOnRunFailure: true,
