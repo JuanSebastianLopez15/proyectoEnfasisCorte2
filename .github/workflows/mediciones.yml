@@ -11,6 +11,8 @@
           description: "Forzar un job por id (vacío = solo los que tocan ahora)"
           required: false
           default: ""
+    push:
+      branches: [develop]
 
   # Para que el workflow pueda guardar el JSON actualizado en el repo
   permissions:
