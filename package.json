@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/JuanSebastianLopez15/proyectoEnfasisCorte2#readme",
   "devDependencies": {
-    "cypress": "^16.2.0"
+    "@cypress-audit/lighthouse": "^1.4.2",
+    "cypress": "^16.2.0",
+    "lighthouse": "^13.5.0"
+  },
+  "dependencies": {
+    "googleapis": "^188.0.0"
   }
 }
