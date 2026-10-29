@@ -64,5 +64,38 @@
     "performance": 77,
     "status": "ok",
     "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T16:36:42.786Z",
+    "firstContentfulPaint": null,
+    "largestContentfulPaint": null,
+    "speedIndex": null,
+    "performance": null,
+    "status": "error",
+    "error": "`cy.visit()` failed trying to load:\n\nhttps://www.autonoma.edu.co/biblioteca-uam\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ESOCKETTIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer"
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T16:37:05.045Z",
+    "firstContentfulPaint": 1208,
+    "largestContentfulPaint": null,
+    "speedIndex": 2388,
+    "performance": null,
+    "status": "error",
+    "error": "Lighthouse no pudo calcular LCP o el puntaje de performance"
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T16:37:18.107Z",
+    "firstContentfulPaint": 1155,
+    "largestContentfulPaint": 1696,
+    "speedIndex": 1504,
+    "performance": 80,
+    "status": "ok",
+    "error": null
   }
 ]
