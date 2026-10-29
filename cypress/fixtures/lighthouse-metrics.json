@@ -361,5 +361,82 @@
     "performance": 82,
     "status": "ok",
     "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T19:12:36.099Z",
+    "firstContentfulPaint": 1337,
+    "largestContentfulPaint": 1377,
+    "speedIndex": 1599,
+    "performance": 83,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T19:14:54.755Z",
+    "firstContentfulPaint": 1132,
+    "largestContentfulPaint": 1660,
+    "speedIndex": 1240,
+    "performance": 83,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T19:15:20.513Z",
+    "firstContentfulPaint": 1171,
+    "largestContentfulPaint": 1245,
+    "speedIndex": 1670,
+    "performance": 77,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T19:15:32.349Z",
+    "firstContentfulPaint": 1211,
+    "largestContentfulPaint": 1263,
+    "speedIndex": 1420,
+    "performance": 88,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T19:15:44.508Z",
+    "firstContentfulPaint": 1096,
+    "largestContentfulPaint": 1179,
+    "speedIndex": 1125,
+    "performance": 80,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T19:16:01.699Z",
+    "firstContentfulPaint": 1106,
+    "largestContentfulPaint": 1143,
+    "speedIndex": 1133,
+    "performance": 67,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T19:16:14.003Z",
+    "firstContentfulPaint": 1124,
+    "largestContentfulPaint": 1211,
+    "speedIndex": 1138,
+    "performance": 80,
+    "status": "ok",
+    "error": null
   }
 ]

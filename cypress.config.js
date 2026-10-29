@@ -1,3 +1,5 @@
+//Conecta Lighthouse con cypress y guarda los resultados en un JSON
+
 const { defineConfig } = require("cypress");
 const { lighthouse, prepareAudit } = require("@cypress-audit/lighthouse");
 const fs = require("fs");
@@ -68,7 +70,7 @@ module.exports = defineConfig({
   taskTimeout: 180000, // Lighthouse tarda, así Cypress no corta la tarea
   env: { dispositivo: "todos", paginas: "todas" }, // por defecto mide todos los dispositivos
   e2e: {
-    video: false, //no hace falta grabar video en cada medición
+    video: true, //no hace falta grabar video en cada medición
     screenshotOnRunFailure: true,
     setupNodeEvents(on, config) {
       on("before:browser:launch", (browser = {}, opciones) => {

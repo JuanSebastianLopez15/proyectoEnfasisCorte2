@@ -15,4 +15,4 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import "@cypress-audit/lighthouse/commands";
+import "@cypress-audit/lighthouse/commands"; //activa el lighthouse

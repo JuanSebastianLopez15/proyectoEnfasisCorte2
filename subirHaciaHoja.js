@@ -1,3 +1,5 @@
+//lee el JSON y lo escribe en tu Google Sheet.
+
 const { google } = require("googleapis");
 const fs = require("fs");
 

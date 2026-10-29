@@ -1,3 +1,5 @@
+//recorre cada url/pagina en cada dispositivo y el ligthouse mide
+
 const paginas = require("../../../config/pages");
 const dispositivos = require("../../../config/devices");
 
@@ -30,6 +32,9 @@ dispositivos.forEach((dispositivo) => {
 
           cy.viewport(dispositivo.width, dispositivo.height);
           cy.visit(pagina.url);
+
+          // Guarda una captura de cada página/dispositivo en cypress/screenshots
+          cy.screenshot(`${pagina.id}-${dispositivo.id}`, { capture: "viewport" });
 
           cy.lighthouse(sinMinimos, {}, {
             extends: "lighthouse:default",
