@@ -97,5 +97,38 @@
     "performance": 80,
     "status": "ok",
     "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T17:06:34.765Z",
+    "firstContentfulPaint": 1117,
+    "largestContentfulPaint": 1897,
+    "speedIndex": 1477,
+    "performance": 76,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T17:06:53.528Z",
+    "firstContentfulPaint": 1155,
+    "largestContentfulPaint": null,
+    "speedIndex": 1445,
+    "performance": null,
+    "status": "error",
+    "error": "Lighthouse no pudo calcular LCP o el puntaje de performance"
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T17:07:05.825Z",
+    "firstContentfulPaint": 1171,
+    "largestContentfulPaint": 1718,
+    "speedIndex": 1435,
+    "performance": 86,
+    "status": "ok",
+    "error": null
   }
 ]
