@@ -262,5 +262,71 @@
     "performance": null,
     "status": "error",
     "error": "Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T18:41:29.623Z",
+    "firstContentfulPaint": 1289,
+    "largestContentfulPaint": 1741,
+    "speedIndex": 1826,
+    "performance": 73,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T18:41:49.139Z",
+    "firstContentfulPaint": 1134,
+    "largestContentfulPaint": null,
+    "speedIndex": 1437,
+    "performance": null,
+    "status": "error",
+    "error": "Lighthouse no pudo calcular LCP o el puntaje de performance"
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T18:42:01.884Z",
+    "firstContentfulPaint": 1276,
+    "largestContentfulPaint": 1333,
+    "speedIndex": 1532,
+    "performance": 84,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T18:42:24.946Z",
+    "firstContentfulPaint": 1463,
+    "largestContentfulPaint": 1910,
+    "speedIndex": 1720,
+    "performance": 56,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T18:43:25.299Z",
+    "firstContentfulPaint": null,
+    "largestContentfulPaint": null,
+    "speedIndex": null,
+    "performance": null,
+    "status": "error",
+    "error": "Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T18:43:38.680Z",
+    "firstContentfulPaint": 1287,
+    "largestContentfulPaint": 1367,
+    "speedIndex": 1420,
+    "performance": 64,
+    "status": "ok",
+    "error": null
   }
 ]
