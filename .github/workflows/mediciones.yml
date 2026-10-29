@@ -1,87 +1,84 @@
-name: Mediciones programadas
+  name: Mediciones programadas
 
-on:
-  schedule:
-    # Cada 30 min (minutos 7 y 37, para evitar la congestión de la hora en punto).
-    # El cron de GitHub va en UTC, pero scheduler/ejecutar.js decide en hora de Bogotá.
-    - cron: "7,37 * * * *"
-  workflow_dispatch:           # permite ejecutarlo a mano desde la pestaña Actions
-    inputs:
-      job:
-        description: "Forzar un job por id (vacío = solo los que tocan ahora)"
-        required: false
-        default: ""
-  # TEMPORAL: para probar desde tu rama sin pasar por main. Bórralo después de probar.
-  push:
-    branches: [feature/kami]
+  on:
+    schedule:
+      # Cada 30 min (minutos 7 y 37, para evitar la congestión de la hora en punto).
+      # El cron de GitHub va en UTC, pero scheduler/ejecutar.js decide en hora de Bogotá.
+      - cron: "7,37 * * * *"
+    workflow_dispatch:           # permite ejecutarlo a mano desde la pestaña Actions
+      inputs:
+        job:
+          description: "Forzar un job por id (vacío = solo los que tocan ahora)"
+          required: false
+          default: ""
 
-# Para que el workflow pueda guardar el JSON actualizado en el repo
-permissions:
-  contents: write
+  # Para que el workflow pueda guardar el JSON actualizado en el repo
+  permissions:
+    contents: write
 
-# Evita que dos ejecuciones se pisen al escribir el JSON
-concurrency:
-  group: mediciones
-  cancel-in-progress: false
+  # Evita que dos ejecuciones se pisen al escribir el JSON
+  concurrency:
+    group: mediciones
+    cancel-in-progress: false
 
-jobs:
-  medir:
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - name: Descargar el repositorio
-        uses: actions/checkout@v4
+  jobs:
+    medir:
+      runs-on: ubuntu-latest
+      timeout-minutes: 30
+      steps:
+        - name: Descargar el repositorio
+          uses: actions/checkout@v4
 
-      - name: Instalar Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: npm
+        - name: Instalar Node
+          uses: actions/setup-node@v4
+          with:
+            node-version: "22"
+            cache: npm
 
-      - name: Instalar dependencias
-        run: npm ci
+        - name: Instalar dependencias
+          run: npm ci
 
-      - name: Ejecutar todos los jobs
-        env:
-          JOB: ${{ inputs.job }}
-          EVENTO: ${{ github.event_name }}
-        run: |
-          fallo=0
-          if [ "$EVENTO" = "push" ]; then
-            node scheduler/ejecutar.js --forzar movil-diario || fallo=1
-            node scheduler/ejecutar.js --forzar escritorio-diario || fallo=1
-          elif [ -n "$JOB" ]; then
-            node scheduler/ejecutar.js --forzar "$JOB" || fallo=1
-          else
-            node scheduler/ejecutar.js || fallo=1
-          fi
-          exit $fallo
+        - name: Ejecutar todos los jobs
+          env:
+            JOB: ${{ inputs.job }}
+            EVENTO: ${{ github.event_name }}
+          run: |
+            fallo=0
+            if [ "$EVENTO" = "push" ]; then
+              node scheduler/ejecutar.js --forzar movil-diario || fallo=1
+              node scheduler/ejecutar.js --forzar escritorio-diario || fallo=1
+            elif [ -n "$JOB" ]; then
+              node scheduler/ejecutar.js --forzar "$JOB" || fallo=1
+            else
+              node scheduler/ejecutar.js || fallo=1
+            fi
+            exit $fallo
 
-      - name: Detectar si el JSON cambió
-        id: cambios
-        if: always()
-        run: |
-          if git diff --quiet -- cypress/fixtures/lighthouse-metrics.json; then
-            echo "hay=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "hay=true" >> "$GITHUB_OUTPUT"
-          fi
+        - name: Detectar si el JSON cambió
+          id: cambios
+          if: always()
+          run: |
+            if git diff --quiet -- cypress/fixtures/lighthouse-metrics.json; then
+              echo "hay=false" >> "$GITHUB_OUTPUT"
+            else
+              echo "hay=true" >> "$GITHUB_OUTPUT"
+            fi
 
-      - name: Actualizar Google Sheets
-        if: always() && steps.cambios.outputs.hay == 'true'
-        env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-        run: |
-          printf '%s' "$GOOGLE_CREDENTIALS" > credentials.json
-          node subirHaciaHoja.js
-          rm -f credentials.json
+        - name: Actualizar Google Sheets
+          if: always() && steps.cambios.outputs.hay == 'true'
+          env:
+            GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          run: |
+            printf '%s' "$GOOGLE_CREDENTIALS" > credentials.json
+            node subirHaciaHoja.js
+            rm -f credentials.json
 
-      - name: Guardar el JSON actualizado en el repo
-        if: always() && steps.cambios.outputs.hay == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add cypress/fixtures/lighthouse-metrics.json
-          git commit -m "chore: actualizar métricas de rendimiento (ejecución programada)"
-          git pull --rebase
-          git push
+        - name: Guardar el JSON actualizado en el repo
+          if: always() && steps.cambios.outputs.hay == 'true'
+          run: |
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add cypress/fixtures/lighthouse-metrics.json
+            git commit -m "chore: actualizar métricas de rendimiento (ejecución programada)"
+            git pull --rebase
+            git push
