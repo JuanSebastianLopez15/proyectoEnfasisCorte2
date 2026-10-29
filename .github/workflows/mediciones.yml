@@ -41,16 +41,21 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Ejecutar los jobs que tocan
+      - name: Ejecutar todos los jobs
         env:
-          # En la prueba por push fuerza el job móvil; a mano usa el campo "job"
-          JOB: ${{ github.event_name == 'push' && 'movil-diario' || inputs.job }}
+          JOB: ${{ inputs.job }}
+          EVENTO: ${{ github.event_name }}
         run: |
-          if [ -n "$JOB" ]; then
-            node scheduler/ejecutar.js --forzar "$JOB"
+          fallo=0
+          if [ "$EVENTO" = "push" ]; then
+            node scheduler/ejecutar.js --forzar movil-diario || fallo=1
+            node scheduler/ejecutar.js --forzar escritorio-diario || fallo=1
+          elif [ -n "$JOB" ]; then
+            node scheduler/ejecutar.js --forzar "$JOB" || fallo=1
           else
-            node scheduler/ejecutar.js
+            node scheduler/ejecutar.js || fallo=1
           fi
+          exit $fallo
 
       - name: Detectar si el JSON cambió
         id: cambios
