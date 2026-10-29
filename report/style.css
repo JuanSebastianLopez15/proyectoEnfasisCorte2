@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+header {
+  background: #12355b;
+  color: #fff;
+  padding: 20px 32px;
+}
+
+header p {
+  margin: 4px 0 0;
+  opacity: .85;
+}
+
+main {
+  padding: 24px 32px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  margin-top: 36px;
+}
+
+/* Tarjetas de resumen */
+.tarjetas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px 20px;
+  min-width: 190px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+
+.tarjeta b {
+  display: block;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.tarjeta small {
+  color: #52606d;
+}
+
+/* Tablas */
+.tabla {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+
+th, td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e4e7eb;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+th {
+  background: #e4ecf5;
+}
+
+tr.error {
+  background: #fde4e4;
+}
+
+/* Etiquetas de clasificación (llevan símbolo, no solo color) */
+.etiqueta {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 6px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.bueno {
+  background: #e3f7e8;
+  color: #14602b;
+  border-color: #14602b;
+}
+
+.mejorar {
+  background: #fff4d6;
+  color: #7a5200;
+  border-color: #7a5200;
+}
+
+.deficiente {
+  background: #fde4e4;
+  color: #8a1c1c;
+  border-color: #8a1c1c;
+}
+
+.nota {
+  color: #52606d;
+  font-size: 13px;
+}
+
+select {
+  padding: 4px 8px;
+  margin-left: 8px;
+}
