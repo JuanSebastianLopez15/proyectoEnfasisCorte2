@@ -196,5 +196,71 @@
     "performance": 60,
     "status": "ok",
     "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T18:20:34.456Z",
+    "firstContentfulPaint": 1184,
+    "largestContentfulPaint": 1184,
+    "speedIndex": 1402,
+    "performance": 76,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T18:20:53.682Z",
+    "firstContentfulPaint": 1154,
+    "largestContentfulPaint": null,
+    "speedIndex": 1576,
+    "performance": null,
+    "status": "error",
+    "error": "Lighthouse no pudo calcular LCP o el puntaje de performance"
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Moto G (412x823)",
+    "timestamp": "2026-10-29T18:21:06.319Z",
+    "firstContentfulPaint": 1160,
+    "largestContentfulPaint": 1231,
+    "speedIndex": 1499,
+    "performance": 81,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/biblioteca-uam",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T18:21:29.345Z",
+    "firstContentfulPaint": 1181,
+    "largestContentfulPaint": 1757,
+    "speedIndex": 1433,
+    "performance": 59,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/proyeccion/paz-y-competitividad",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T18:21:48.361Z",
+    "firstContentfulPaint": 1171,
+    "largestContentfulPaint": 1330,
+    "speedIndex": 1395,
+    "performance": 63,
+    "status": "ok",
+    "error": null
+  },
+  {
+    "url": "https://www.autonoma.edu.co/uamvirtual",
+    "screenEmulation": "Escritorio (1350x940)",
+    "timestamp": "2026-10-29T18:22:48.662Z",
+    "firstContentfulPaint": null,
+    "largestContentfulPaint": null,
+    "speedIndex": null,
+    "performance": null,
+    "status": "error",
+    "error": "Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
   }
 ]
