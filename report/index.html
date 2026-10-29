@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informe de rendimiento web</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Los umbrales se leen de config/thresholds.js, para tenerlos en un solo lugar -->
+  <script>var module = { exports: {} };</script>
+  <script src="../config/thresholds.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Informe de rendimiento web</h1>
+    <p>Universidad Autónoma de Manizales · Lighthouse + Cypress</p>
+  </header>
+
+  <main>
+    <p id="estado" class="nota">Cargando datos...</p>
+
+    <div class="tarjetas" id="tarjetas"></div>
+
+    <h2>Última medición por página y dispositivo</h2>
+    <div class="tabla"><table id="ultimas"></table></div>
+    <p class="nota">Clasificación según config/thresholds.js. Tiempos en segundos.</p>
+
+    <h2>Comparación entre dispositivos (promedio de Performance)</h2>
+    <div class="tabla"><table id="comparacion"></table></div>
+
+    <h2>Errores registrados</h2>
+    <div class="tabla"><table id="errores"></table></div>
+
+    <h2>Historial completo
+      <select id="filtro"></select>
+    </h2>
+    <div class="tabla"><table id="historial"></table></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
